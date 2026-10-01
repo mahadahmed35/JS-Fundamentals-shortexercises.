@@ -29,8 +29,23 @@
 // console.log(reverseNumber(32243))
 
 // Check Palindrome.
-function isPalindrome(str){
-return str === str.split('').reverse().join('');
+// function isPalindrome(str){
+// return str === str.split('').reverse().join('');
+// }
+
+// console.log(isPalindrome("madan"));
+
+// String Combinations.
+
+// String Combinations.
+function combinations(str){
+    const result = []
+    for(let i = 0; i<str.length; i++){
+        for(let j = i+ 1; j<=str.length; j++){
+            result.push(str.slice(i, j))
+        }
+    }
+    return result;
 }
 
-console.log(isPalindrome("madan"));
+console.log(combinations("dog"));
