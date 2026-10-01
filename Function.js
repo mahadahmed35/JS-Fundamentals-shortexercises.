@@ -38,14 +38,28 @@
 // String Combinations.
 
 // String Combinations.
-function combinations(str){
-    const result = []
-    for(let i = 0; i<str.length; i++){
-        for(let j = i+ 1; j<=str.length; j++){
-            result.push(str.slice(i, j))
-        }
-    }
-    return result;
+// function combinations(str){
+//     const result = []
+//     for(let i = 0; i<str.length; i++){
+//         for(let j = i+ 1; j<=str.length; j++){
+//             result.push(str.slice(i, j))
+//         }
+//     }
+//     return result;
+// }
+
+// console.log(combinations("dog"));
+
+// Sort String Alphabetically.
+// function sortAlphabetically(str){
+//     return str.split('').sort().join('')
+// }
+
+// console.log(sortAlphabetically('webmaster'))
+
+// Capitalize the first word each word.
+function toUpperCase(str){
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-console.log(combinations("dog"));
+console.log(toUpperCase('moooo', 'How are you doing my friend'))
