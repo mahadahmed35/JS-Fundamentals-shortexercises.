@@ -21,9 +21,16 @@
 // console.log(salutation)
 
 //  Reverse Number.
-function reverseNumber(num){
-    num = num + "";
-  return num.split("").reverse()
+// function reverseNumber(num){
+//     num = num + "";
+//   return num.split("").reverse()
+// }
+
+// console.log(reverseNumber(32243))
+
+// Check Palindrome.
+function isPalindrome(str){
+return str === str.split('').reverse().join('');
 }
 
-console.log(reverseNumber(32243))
+console.log(isPalindrome("madan"));
