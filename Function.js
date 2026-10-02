@@ -58,8 +58,18 @@
 // console.log(sortAlphabetically('webmaster'))
 
 // Capitalize the first word each word.
-function toUpperCase(str){
-    return str.split(' ').map(str=> str.charAt(0).toUpperCase() + str.slice(1)).join('');
+// function toUpperCase(str){
+//     return str.split(' ').map(str=> str.charAt(0).toUpperCase() + str.slice(1)).join('');
+// }
+
+// console.log(toUpperCase('moooo how are you doing my friend'))
+
+// function toUpperCase(str){
+//     return str.split(' ').reverse().join(' ')
+// }
+// console.log(toUpperCase('hello how are you doing how is everything?'))
+function capitalize(str){
+ return str.split(' ').map(str => str[0].toUpperCase() + str.slice(1)).reverse().join(' ')
 }
 
-console.log(toUpperCase('moooo how are you doing my friend'))
+ console.log(capitalize('moooo how are you doing my friend'))
