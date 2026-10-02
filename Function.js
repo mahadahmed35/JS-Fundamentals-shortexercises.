@@ -59,7 +59,7 @@
 
 // Capitalize the first word each word.
 function toUpperCase(str){
-    return str.charAt(0).toUpperCase() + str.slice(1);
+    return str.split(' ').map(str=> str.charAt(0).toUpperCase() + str.slice(1)).join('');
 }
 
-console.log(toUpperCase('moooo', 'How are you doing my friend'))
+console.log(toUpperCase('moooo how are you doing my friend'))
