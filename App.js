@@ -36,7 +36,7 @@ return pass;
 // console.log(getStudentStatus(51.67))
 
 // Work with one Students.
-const student = students[0];
+// const student = students[0];
 
 // console.log(student.name);
 // console.log(student.grades);
@@ -51,10 +51,77 @@ students.forEach(function(student){
 })
 
 // Find the top student.
-const topPerformer = students.find(students => students.grades[0]> 85)
-// console.log(topPerformer)
+let topStudent = students[0];
+students.forEach(function(student){
+    const average = calculateAverage(student.grades);
+    const topAverage = calculateAverage(topStudent.grades);
+
+    if(average > topAverage){
+        topStudent = student;
+    }
+})
+console.log(topStudent)
+
 
 // Add Student.
 function addStudent(name, grades){
+  const student = {
+  name: name,
+  grades: grades
+  };
 
+  students.push(student);
+  console.log(`Student ${name} added succesfully!`, student);
+  return students;
 }
+
+
+// addStudent("Alice", [80, 90, 85]);
+
+// addGrade();
+function addGrade(name, grade){
+    const student =  findStudent(name);
+    if(student){
+        student.grades.push(grade)
+    }
+    return students;
+    }
+    
+
+    // FInd Student.
+    
+function findStudent(name){
+    return students.find(student => student.name === name)
+}
+console.log(findStudent("Mahad"))
+
+    // Generate the final report.
+
+    function generateReport(){
+   let report = "===== STUDENT REPORT =====\n\n";
+     students.forEach(function(student){
+        const average = calculateAverage(student.grades);
+        const status = getStudentStatus(average);
+        
+        report += `${student.name} - Average: ${average.toFixed(2)} - ${status}\n`;
+     })
+      let topStudent = students[0];
+
+    students.forEach(function(student) {
+        const average = calculateAverage(student.grades);
+        const topAverage = calculateAverage(topStudent.grades);
+
+        if (average > topAverage) {
+            topStudent = student;
+        }
+    });
+    
+
+    const topAverage = calculateAverage(topStudent.grades);
+
+    report += `\nTop Student: ${topStudent.name}\n`;
+    report += `Top Average: ${topAverage.toFixed(2)}\n`;
+     return report;
+    }
+
+    console.log(generateReport())
