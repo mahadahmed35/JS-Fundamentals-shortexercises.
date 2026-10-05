@@ -18,3 +18,10 @@ function mean(x, y){
 }
 
 console.log(mean(1, 2));
+function mean(x, y){
+    // let sum = x+ y;
+    let mean = (x+y) / 2;
+    return mean;
+}
+
+console.log(mean(1, 2));
