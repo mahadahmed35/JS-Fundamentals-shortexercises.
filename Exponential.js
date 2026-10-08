@@ -33,5 +33,14 @@
 // console.log(null === undefined)
 
 // Nullish Coescing.
-let user= null;
-console.log(user ?? "Anonymous")
+// let user= 0;
+// console.log(user ?? "Anonymous")
+
+// let height = null;
+// let width = null;
+
+// // important: use parentheses
+// let area = height ?? 100 * width ?? 50;
+// console.log(area)
+// let x = (1 && 2) ?? 3;
+// console.log(x)
