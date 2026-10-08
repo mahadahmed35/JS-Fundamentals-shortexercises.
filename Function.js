@@ -73,3 +73,8 @@ function capitalize(str){
 }
 
  console.log(capitalize('moooo how are you doing my friend'))
+function capitalize(str){
+ return str.split(' ').map(str => str[0].toUpperCase() + str.slice(1)).reverse().join(' ')
+}
+
+ console.log(capitalize('moooo how are you doing my friend'))
