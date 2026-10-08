@@ -25,5 +25,13 @@
 // console.log(d)
 
 // Comparison string and number.
-console.log("1" == 1);
-console.log("2" == 1);
+// console.log("1" == 1);
+// console.log("2" == 1);
+
+// Loose equality and strict equality.
+// console.log(null == undefined)
+// console.log(null === undefined)
+
+// Nullish Coescing.
+let user= null;
+console.log(user ?? "Anonymous")
