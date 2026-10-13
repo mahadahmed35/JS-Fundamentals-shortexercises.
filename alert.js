@@ -25,6 +25,6 @@
 // alert( Number(undefined) ); 
 // alert( Number("undefined") ); 
 // Reminder
-alert( 5 % 2 ); // 1, the remainder of 5 divided by 2
-alert( 8 % 3 ); // 2, the remainder of 8 divided by 3
-alert( 8 % 4 );
+// alert( 5 % 2 ); // 1, the remainder of 5 divided by 2
+// alert( 8 % 3 ); // 2, the remainder of 8 divided by 3
+// alert( 8 % 4 );
